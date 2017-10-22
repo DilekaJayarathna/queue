@@ -1,16 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Flatkit - HTML Version | Bootstrap 4 Web App Kit with AngularJS</title>
+    <title>Queue</title>
     <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <!-- for ios 7 style, multi-resolution icon of 152x152 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
@@ -19,14 +17,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" sizes="196x196" href="<?php echo base_url() ?>assets/images/logo.png">
-
     <!-- style -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/animate.css/animate.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/glyphicons/glyphicons.css" type="text/css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/material-design-icons/material-design-icons.css"
           type="text/css"/>
-
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
     <!-- build:css ../assets/styles/app.min.css -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/styles/app.css" type="text/css"/>
@@ -35,9 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 <div class="app" id="app">
-
     <!-- ############ LAYOUT START-->
-
     <!-- aside -->
     <div id="aside" class="app-aside modal fade nav-dropdown">
         <!-- fluid app aside -->
@@ -47,42 +41,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a class="navbar-brand">
                     <div ui-include="'../assets/images/logo.svg'"></div>
                     <img src="<?php echo base_url() ?>assets/images/logo.png" alt="." class="hide">
-                    <span class="hidden-folded inline">Flatkit</span>
+                    <span class="hidden-folded inline">Queue</span>
                 </a>
                 <!-- / brand -->
             </div>
             <div flex class="hide-scroll">
                 <nav class="scroll nav-light">
-
                     <ul class="nav" ui-nav>
                         <li class="nav-header hidden-folded">
                             <small class="text-muted">Main</small>
                         </li>
-
                         <li>
                             <a href="dashboard.html">
-                    <span class="nav-icon">
-                      <i class="material-icons">&#xe3fc;
-                        <span ui-include="'../assets/images/i_0.svg'"></span>
-                      </i>
-                    </span>
+                           <span class="nav-icon">
+                           <i class="material-icons">&#xe3fc;
+                           <span ui-include="'../assets/images/i_0.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-label">
-                      <b class="label rounded label-sm primary">5</b>
-                    </span>
+                           <b class="label rounded label-sm primary">5</b>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe5c3;
-                        <span ui-include="'../assets/images/i_1.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe5c3;
+                           <span ui-include="'../assets/images/i_1.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Apps</span>
                             </a>
                             <ul class="nav-sub">
@@ -103,17 +94,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe8f0;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_2.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe8f0;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_2.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Layouts</span>
                             </a>
                             <ul class="nav-sub">
@@ -134,35 +124,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a href="widget.html">
-                    <span class="nav-icon">
-                      <i class="material-icons">&#xe8d2;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_3.svg'"></span>
-                      </i>
-                    </span>
+                           <span class="nav-icon">
+                           <i class="material-icons">&#xe8d2;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_3.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Widgets</span>
                             </a>
                         </li>
-
                         <li class="nav-header hidden-folded">
                             <small class="text-muted">Components</small>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-label">
-                      <b class="label label-sm accent">8</b>
-                    </span>
+                           <b class="label label-sm accent">8</b>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe429;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_4.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe429;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_4.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">UI kit</span>
                             </a>
                             <ul class="nav-sub nav-mega nav-mega-3">
@@ -253,18 +240,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-label"><b class="label no-bg">9</b></span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe3e8;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_5.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe3e8;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_5.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Pages</span>
                             </a>
                             <ul class="nav-sub nav-mega">
@@ -340,17 +326,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe39e;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_6.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe39e;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_6.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Form</span>
                             </a>
                             <ul class="nav-sub">
@@ -396,17 +381,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe896;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_7.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe896;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_7.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Tables</span>
                             </a>
                             <ul class="nav-sub">
@@ -429,17 +413,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </li>
                         <li>
                             <a>
-                    <span class="nav-caret">
-                      <i class="fa fa-caret-down"></i>
-                    </span>
+                           <span class="nav-caret">
+                           <i class="fa fa-caret-down"></i>
+                           </span>
                                 <span class="nav-label hidden-folded">
-                      <b class="label label-sm info">N</b>
-                    </span>
+                           <b class="label label-sm info">N</b>
+                           </span>
                                 <span class="nav-icon">
-                      <i class="material-icons">&#xe1b8;
-                        <span ui-include="'<?php echo base_url() ?>assets/images/i_8.svg'"></span>
-                      </i>
-                    </span>
+                           <i class="material-icons">&#xe1b8;
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_8.svg'"></span>
+                           </i>
+                           </span>
                                 <span class="nav-text">Charts</span>
                             </a>
                             <ul class="nav-sub">
@@ -450,9 +434,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li>
                                     <a>
-                        <span class="nav-caret">
-                          <i class="fa fa-caret-down"></i>
-                        </span>
+                                 <span class="nav-caret">
+                                 <i class="fa fa-caret-down"></i>
+                                 </span>
                                         <span class="nav-text">Echarts</span>
                                     </a>
                                     <ul class="nav-sub">
@@ -495,37 +479,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-
                         <li class="nav-header hidden-folded">
                             <small class="text-muted">Help</small>
                         </li>
-
                         <li class="hidden-folded">
                             <a href="docs.html">
                                 <span class="nav-text">Documents</span>
                             </a>
                         </li>
-
                     </ul>
                 </nav>
             </div>
             <div flex-no-shrink class="b-t">
                 <div class="nav-fold">
                     <a href="profile.html">
-        	    <span class="pull-left">
-        	      <img src="<?php echo base_url() ?>assets/images/a0.jpg" alt="..." class="w-40 img-circle">
-        	    </span>
+                     <span class="pull-left">
+                     <img src="<?php echo base_url() ?>assets/images/a0.jpg" alt="..." class="w-40 img-circle">
+                     </span>
                         <span class="clear hidden-folded p-x">
-        	      <span class="block _500">Jean Reyes</span>
-        	      <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
-        	    </span>
+                     <span class="block _500">Jean Reyes</span>
+                     <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
+                     </span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
     <!-- / -->
-
     <!-- content -->
     <div id="content" class="app-content box-shadow-z0" role="main">
         <div class="app-header white box-shadow">
@@ -535,10 +515,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <i class="material-icons">&#xe5d2;</i>
                 </a>
                 <!-- / -->
-
                 <!-- Page title - Bind to $state's title -->
                 <div class="navbar-item pull-left h5" ng-bind="$state.current.data.title" id="pageTitle"></div>
-
                 <!-- navbar right -->
                 <ul class="nav navbar-nav pull-right">
                     <li class="nav-item dropdown pos-stc-xs">
@@ -550,10 +528,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link clear" href data-toggle="dropdown">
-                  <span class="avatar w-32">
-                    <img src="<?php echo base_url() ?>assets/images/a0.jpg" alt="...">
-                    <i class="on b-white bottom"></i>
-                  </span>
+                        <span class="avatar w-32">
+                        <img src="<?php echo base_url() ?>assets/images/a0.jpg" alt="...">
+                        <i class="on b-white bottom"></i>
+                        </span>
                         </a>
                         <div ui-include="'../views/blocks/dropdown.user.html'"></div>
                     </li>
@@ -564,7 +542,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                 </ul>
                 <!-- / navbar right -->
-
                 <!-- navbar collapse -->
                 <div class="collapse navbar-toggleable-sm" id="collapse">
                     <div ui-include="'../views/blocks/navbar.form.right.html'"></div>
@@ -599,7 +576,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
         <div ui-view class="app-body" id="view">
-
             <!-- ############ PAGE START-->
             <div class="p-a white lt box-shadow">
                 <div class="row">
@@ -630,9 +606,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-xs-12 col-sm-4">
                         <div class="box p-a">
                             <div class="pull-left m-r">
-	            <span class="w-48 rounded  accent">
-	              <i class="material-icons">&#xe151;</i>
-	            </span>
+                              <span class="w-48 rounded  accent">
+                              <i class="material-icons">&#xe151;</i>
+                              </span>
                             </div>
                             <div class="clear">
                                 <h4 class="m-a-0 text-lg _300"><a href>125 <span class="text-sm">Emails</span></a></h4>
@@ -643,9 +619,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-xs-6 col-sm-4">
                         <div class="box p-a">
                             <div class="pull-left m-r">
-	            <span class="w-48 rounded primary">
-	              <i class="material-icons">&#xe54f;</i>
-	            </span>
+                              <span class="w-48 rounded primary">
+                              <i class="material-icons">&#xe54f;</i>
+                              </span>
                             </div>
                             <div class="clear">
                                 <h4 class="m-a-0 text-lg _300"><a href>40 <span class="text-sm">Projects</span></a></h4>
@@ -656,9 +632,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-xs-6 col-sm-4">
                         <div class="box p-a">
                             <div class="pull-left m-r">
-	            <span class="w-48 rounded warn">
-	              <i class="material-icons">&#xe8d3;</i>
-	            </span>
+                              <span class="w-48 rounded warn">
+                              <i class="material-icons">&#xe8d3;</i>
+                              </span>
                             </div>
                             <div class="clear">
                                 <h4 class="m-a-0 text-lg _300"><a href>600 <span class="text-sm">Users</span></a></h4>
@@ -707,30 +683,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[1, 3.6], [2, 3.5], [3, 6], [4, 4], [5, 4.3], [6, 3.5], [7, 3.6]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                },
-	                { data: [[1, 3], [2, 2.6], [3, 3.2], [4, 3], [5, 3.5], [6, 3], [7, 3.5]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                },
-	                { data: [[1, 2], [2, 1.6], [3, 2.4], [4, 2.1], [5, 1.7], [6, 1.5], [7, 1.7]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                }
-	              ],
-	              {
-	                colors: ['#a88add','#0cc2aa','#fcc100'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px">
+                                 [
+                                 { data: [[1, 3.6], [2, 3.5], [3, 6], [4, 4], [5, 4.3], [6, 3.5], [7, 3.6]],
+                                 points: { show: true, radius: 0},
+                                 splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
+                                 },
+                                 { data: [[1, 3], [2, 2.6], [3, 3.2], [4, 3], [5, 3.5], [6, 3], [7, 3.5]],
+                                 points: { show: true, radius: 0},
+                                 splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
+                                 },
+                                 { data: [[1, 2], [2, 1.6], [3, 2.4], [4, 2.1], [5, 1.7], [6, 1.5], [7, 1.7]],
+                                 points: { show: true, radius: 0},
+                                 splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
+                                 }
+                                 ],
+                                 {
+                                 colors: ['#a88add','#0cc2aa','#fcc100'],
+                                 series: { shadowSize: 3 },
+                                 xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
+                                 yaxis:{ show: true, font: { color: '#ccc' }},
+                                 grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
+                                 tooltip: true,
+                                 tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
+                                 }
+                                 " style="height:188px">
                                 </div>
                             </div>
                         </div>
@@ -774,20 +750,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[1, 2], [2, 4], [3, 5], [4, 7], [5, 6], [6, 4], [7, 5], [8, 4]] }
-	              ],
-	              {
-	                bars: { show: true, fill: true,  barWidth: 0.25, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
-	                colors: ['#a88add'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px">
+                                 [
+                                 { data: [[1, 2], [2, 4], [3, 5], [4, 7], [5, 6], [6, 4], [7, 5], [8, 4]] }
+                                 ],
+                                 {
+                                 bars: { show: true, fill: true,  barWidth: 0.25, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
+                                 colors: ['#a88add'],
+                                 series: { shadowSize: 3 },
+                                 xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
+                                 yaxis:{ show: true, font: { color: '#ccc' }},
+                                 grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
+                                 tooltip: true,
+                                 tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
+                                 }
+                                 " style="height:188px">
                                 </div>
                             </div>
                         </div>
@@ -831,20 +807,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[3, 1], [2, 2], [6, 3], [5, 4], [7, 5]] }
-	              ],
-	              {
-	                bars: { horizontal: true, show: true, fill: true,  barWidth: 0.3, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
-	                colors: ['#0cc2aa'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px">
+                                 [
+                                 { data: [[3, 1], [2, 2], [6, 3], [5, 4], [7, 5]] }
+                                 ],
+                                 {
+                                 bars: { horizontal: true, show: true, fill: true,  barWidth: 0.3, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
+                                 colors: ['#0cc2aa'],
+                                 series: { shadowSize: 3 },
+                                 xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
+                                 yaxis:{ show: true, font: { color: '#ccc' }},
+                                 grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
+                                 tooltip: true,
+                                 tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
+                                 }
+                                 " style="height:188px">
                                 </div>
                             </div>
                         </div>
@@ -860,9 +836,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <ul class="list inset">
                                 <li class="list-item">
                                     <a herf class="list-left">
-			          	<span class="w-40 r-2x _600 text-lg accent">
-			            	B
-                            </span>
+                                 <span class="w-40 r-2x _600 text-lg accent">
+                                 B
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div class="m-y-sm pull-right">
@@ -878,9 +854,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-			          	<span class="w-40 r-2x _600 text-lg success">
-			            	G
-                            </span>
+                                 <span class="w-40 r-2x _600 text-lg success">
+                                 G
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div class="m-y-sm pull-right">
@@ -896,9 +872,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-			          	<span class="w-40 r-2x _600 text-lg purple">
-			            	#
-                            </span>
+                                 <span class="w-40 r-2x _600 text-lg purple">
+                                 #
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div class="m-y-sm pull-right">
@@ -914,9 +890,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-			          	<span class="w-40 r-2x _600 blue">
-			            	<i class="fa fa-lg fa-google"></i>
-                            </span>
+                                 <span class="w-40 r-2x _600 blue">
+                                 <i class="fa fa-lg fa-google"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div class="m-y-sm pull-right">
@@ -932,9 +908,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-			          	<span class="w-40 r-2x _600 blue-800">
-			            	<i class="fa fa-lg fa-facebook"></i>
-                            </span>
+                                 <span class="w-40 r-2x _600 blue-800">
+                                 <i class="fa fa-lg fa-facebook"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div class="m-y-sm pull-right">
@@ -1073,10 +1049,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <ul class="list no-border p-b">
                                 <li class="list-item">
                                     <a herf class="list-left">
-	                	<span class="w-40 avatar">
-		                  <img src="<?php echo base_url() ?>assets/images/a4.jpg" alt="...">
-		                  <i class="on b-white bottom"></i>
-	                    </span>
+                                 <span class="w-40 avatar">
+                                 <img src="<?php echo base_url() ?>assets/images/a4.jpg" alt="...">
+                                 <i class="on b-white bottom"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div><a href>Chris Fox</a></div>
@@ -1085,10 +1061,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-	                  <span class="w-40 avatar">
-		                  <img src="<?php echo base_url() ?>assets/images/a5.jpg" alt="...">
-		                  <i class="on b-white bottom"></i>
-	                  </span>
+                                 <span class="w-40 avatar">
+                                 <img src="<?php echo base_url() ?>assets/images/a5.jpg" alt="...">
+                                 <i class="on b-white bottom"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div><a href>Mogen Polish</a></div>
@@ -1097,10 +1073,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-	                  <span class="w-40 avatar">
-		                  <img src="<?php echo base_url() ?>assets/images/a6.jpg" alt="...">
-		                  <i class="away b-white bottom"></i>
-	                  </span>
+                                 <span class="w-40 avatar">
+                                 <img src="<?php echo base_url() ?>assets/images/a6.jpg" alt="...">
+                                 <i class="away b-white bottom"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div><a href>Joge Lucky</a></div>
@@ -1109,10 +1085,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-	                  <span class="w-40 avatar">
-		                  <img src="<?php echo base_url() ?>assets/images/a7.jpg" alt="...">
-		                  <i class="busy b-white bottom"></i>
-	                  </span>
+                                 <span class="w-40 avatar">
+                                 <img src="<?php echo base_url() ?>assets/images/a7.jpg" alt="...">
+                                 <i class="busy b-white bottom"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div><a href>Folisise Chosielie</a></div>
@@ -1121,10 +1097,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li class="list-item">
                                     <a herf class="list-left">
-	                	<span class="w-40 avatar success">
-		                  <span>P</span>
-		                  <i class="away b-white bottom"></i>
-		                </span>
+                                 <span class="w-40 avatar success">
+                                 <span>P</span>
+                                 <i class="away b-white bottom"></i>
+                                 </span>
                                     </a>
                                     <div class="list-body">
                                         <div><a href>Peter</a></div>
@@ -1235,13 +1211,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </div>
-
             <!-- ############ PAGE END-->
-
         </div>
     </div>
     <!-- / -->
-
     <!-- theme switcher -->
     <div id="switcher">
         <div class="switcher box-color dark-white text-color" id="sw-theme">
@@ -1335,7 +1308,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-
         <div class="switcher box-color black lt" id="sw-demo">
             <a href ui-toggle-class="active" target="#sw-demo" class="box-color black lt text-color sw-btn">
                 <i class="fa fa-list text-white"></i>
@@ -1383,9 +1355,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
     <!-- / -->
-
     <!-- ############ LAYOUT END-->
-
 </div>
 <!-- build:js scripts/app.html.js -->
 <!-- jQuery -->
@@ -1397,9 +1367,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url() ?>assets/libs/jquery/underscore/underscore-min.js"></script>
 <script src="<?php echo base_url() ?>assets/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
 <script src="<?php echo base_url() ?>assets/libs/jquery/PACE/pace.min.js"></script>
-
 <script src="<?php echo base_url() ?>assets/js/config.lazyload.js"></script>
-
 <script src="<?php echo base_url() ?>assets/js/palette.js"></script>
 <script src="<?php echo base_url() ?>assets/js/ui-load.js"></script>
 <script src="<?php echo base_url() ?>assets/js/ui-jp.js"></script>
@@ -1410,13 +1378,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url() ?>assets/js/ui-screenfull.js"></script>
 <script src="<?php echo base_url() ?>assets/js/ui-scroll-to.js"></script>
 <script src="<?php echo base_url() ?>assets/js/ui-toggle-class.js"></script>
-
 <script src="<?php echo base_url() ?>assets/js/app.js"></script>
-
 <!-- ajax -->
 <script src="<?php echo base_url() ?>assets/libs/jquery/jquery-pjax/jquery.pjax.js"></script>
 <script src="<?php echo base_url() ?>assets/js/ajax.js"></script>
 <!-- endbuild -->
 </body>
 </html>
-
