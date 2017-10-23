@@ -26,3 +26,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/styles/app.css" type="text/css"/>
 <!-- endbuild -->
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/styles/font.css" type="text/css"/>
+
+
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css" type="text/css"/>

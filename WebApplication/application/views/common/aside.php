@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                         <ul class="nav-sub">
                             <li>
-                                <a href="contact.html">
+                                <a href="<?php echo base_url();?>index.php/NewEmployee">
                                     <span class="nav-text">New employee</span>
                                 </a>
                             </li>

@@ -22,8 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-12">
                         <div class="box">
                             <div class="box-header">
-                                <h2>New Employee</h2>
-                                <small>New employee registration form.
+                                <h2>New Patient</h2>
+                                <small>New patient registration form.
                                 </small>
                             </div>
                             <div class="box-divider m-a-0"></div>
@@ -154,22 +154,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="email" class="form-control" id="inputEmail"
                                                                placeholder="Email">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <div class="box-divider m-a-0"></div>
-                                                </div>
-                                                <div class="form-group row form-sub-group">
-                                                    <small>Role</small>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputRole"
-                                                           class="col-sm-2 form-control-label">Role</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control c-select">
-                                                            <option>Doctor</option>
-                                                            <option>Receptionist</option>
-                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
