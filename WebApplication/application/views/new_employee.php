@@ -6,6 +6,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <!--    Head-->
     <?php include 'common/head.php' ?>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/parsleyjs/dist/parsley.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.dark.css">
 </head>
 <body>
 <div class="app" id="app">
@@ -18,6 +22,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div ui-view class="app-body" id="view">
             <!--            Content-->
             <div class="padding">
+                <div class="container">
+                    <div class="row">
+                        <div class='col-sm-6'>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#datetimepicker1').datetimepicker();
+                            });
+                        </script>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box">
@@ -39,6 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputUsername" class="col-sm-2 form-control-label">Username</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputUsername"
+                                                               name="username"
                                                                placeholder="Username">
                                                     </div>
                                                 </div>
@@ -46,6 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputPassword" class="col-sm-2 form-control-label">Password</label>
                                                     <div class="col-sm-10">
                                                         <input type="password" class="form-control" id="inputPassword"
+                                                               name="password"
                                                                placeholder="Password">
                                                     </div>
                                                 </div>
@@ -60,6 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputFirstName"
+                                                               name="firstName"
                                                                placeholder="First name">
                                                     </div>
                                                 </div>
@@ -68,6 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputMiddleName"
+                                                               name="middleName"
                                                                placeholder="Middle name">
                                                     </div>
                                                 </div>
@@ -76,6 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputLastName"
+                                                               name="lastName"
                                                                placeholder="Last name">
                                                     </div>
                                                 </div>
@@ -83,8 +111,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputDob" class="col-sm-2 form-control-label">Date of
                                                         birth</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputDob"
-                                                               placeholder="Date of birth">
+                                                        <div class="input-group date" ui-jp="datetimepicker"
+                                                             ui-options="{
+                                                                  format: 'DD/MM/YYYY',
+                                                                  icons: {
+                                                                  time: 'fa fa-clock-o',
+                                                                  date: 'fa fa-calendar',
+                                                                  up: 'fa fa-chevron-up',
+                                                                  down: 'fa fa-chevron-down',
+                                                                  previous: 'fa fa-chevron-left',
+                                                                  next: 'fa fa-chevron-right',
+                                                                  today: 'fa fa-screenshot',
+                                                                  clear: 'fa fa-trash',
+                                                                  close: 'fa fa-remove'
+                                                                  }
+                                                                  }">
+                                                            <input type="text" class="form-control">
+                                                            <span class="input-group-addon">
+                                                              <span class="fa fa-calendar"></span>
+                                                              </span>
+                                                        </div>
+                                                        <!--                                                        <input type="text" class="form-control" id="inputDob"-->
+                                                        <!--                                                               placeholder="Date of birth">-->
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -93,7 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
-                                                                <input type="radio" name="a" checked="true" >
+                                                                <input type="radio" name="a" checked="true">
                                                                 <i class="dark-white"></i>
                                                                 Male
                                                             </label>
@@ -101,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
                                                                 <input type="radio" name="a">
-                                                                   <i class="dark-white"></i>
+                                                                <i class="dark-white"></i>
                                                                 Female
                                                             </label>
                                                         </div>
@@ -111,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputNic"
                                                            class="col-sm-2 form-control-label">NIC</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputNic"
+                                                        <input type="text" class="form-control" id="inputNic" name="nic"
                                                                placeholder="NIC">
                                                     </div>
                                                 </div>
@@ -138,6 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputTelephone" class="col-sm-2 form-control-label">Telephone</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputTelephone"
+                                                               name="telephone"
                                                                placeholder="Telephone">
                                                     </div>
                                                 </div>
@@ -145,6 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputAddress" class="col-sm-2 form-control-label">Address</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputAddress"
+                                                               name="address"
                                                                placeholder="Address">
                                                     </div>
                                                 </div>
@@ -153,6 +203,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                            class="col-sm-2 form-control-label">Email</label>
                                                     <div class="col-sm-10">
                                                         <input type="email" class="form-control" id="inputEmail"
+                                                               name="email"
                                                                placeholder="Email">
                                                     </div>
                                                 </div>
@@ -186,5 +237,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--Foot-->
 <?php include 'common/foot.php' ?>
+<script src="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 </body>
 </html>

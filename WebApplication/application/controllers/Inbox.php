@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class NewPatient extends CI_Controller
+class Inbox extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('new_patient');
+        $this->load->view('inbox');
     }
 }
