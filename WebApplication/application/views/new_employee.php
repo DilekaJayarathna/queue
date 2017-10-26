@@ -6,10 +6,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <!--    Head-->
     <?php include 'common/head.php' ?>
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/parsleyjs/dist/parsley.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.dark.css">
+    <script type="text/javascript" src="<?php echo base_url() ?>bower_components/moment/min/moment.min.js"></script>
+    <!--    <script type="text/javascript" src="-->
+    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript"
+            src="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <!--    <link rel="stylesheet" href="-->
+    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet"
+          href="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
 </head>
 <body>
 <div class="app" id="app">
@@ -22,25 +27,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div ui-view class="app-body" id="view">
             <!--            Content-->
             <div class="padding">
-                <div class="container">
-                    <div class="row">
-                        <div class='col-sm-6'>
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <script type="text/javascript">
-                            $(function () {
-                                $('#datetimepicker1').datetimepicker();
-                            });
-                        </script>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box">
@@ -51,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="box-divider m-a-0"></div>
                             <div class="box-body">
-                                <form role="form">
+                                <form role="form" action="<?php echo site_url('New_employee/register'); ?>" method="post">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="padding">
@@ -111,28 +97,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputDob" class="col-sm-2 form-control-label">Date of
                                                         birth</label>
                                                     <div class="col-sm-10">
-                                                        <div class="input-group date" ui-jp="datetimepicker"
-                                                             ui-options="{
-                                                                  format: 'DD/MM/YYYY',
-                                                                  icons: {
-                                                                  time: 'fa fa-clock-o',
-                                                                  date: 'fa fa-calendar',
-                                                                  up: 'fa fa-chevron-up',
-                                                                  down: 'fa fa-chevron-down',
-                                                                  previous: 'fa fa-chevron-left',
-                                                                  next: 'fa fa-chevron-right',
-                                                                  today: 'fa fa-screenshot',
-                                                                  clear: 'fa fa-trash',
-                                                                  close: 'fa fa-remove'
-                                                                  }
-                                                                  }">
-                                                            <input type="text" class="form-control">
+                                                        <div class='input-group date' id='datetimepicker'>
+                                                            <input type='text' class="form-control" id="inputDob" name="dob"
+                                                                   placeholder="Date of birth"/>
                                                             <span class="input-group-addon">
-                                                              <span class="fa fa-calendar"></span>
-                                                              </span>
+                                                                              <span class="fa fa-calendar"></span>
+                                                                              </span>
                                                         </div>
-                                                        <!--                                                        <input type="text" class="form-control" id="inputDob"-->
-                                                        <!--                                                               placeholder="Date of birth">-->
+
+                                                        <!--Move this script out of view-->
+                                                        <script type="text/javascript">
+                                                            $(function () {
+                                                                $('#datetimepicker').datetimepicker({
+                                                                    format: 'DD/MM/YYYY',
+                                                                    icons: {
+                                                                        time: 'fa fa-clock-o',
+                                                                        date: 'fa fa-calendar',
+                                                                        up: 'fa fa-chevron-up',
+                                                                        down: 'fa fa-chevron-down',
+                                                                        previous: 'fa fa-chevron-left',
+                                                                        next: 'fa fa-chevron-right',
+                                                                        today: 'fa fa-screenshot',
+                                                                        clear: 'fa fa-trash',
+                                                                        close: 'fa fa-remove'
+                                                                    }
+                                                                });
+                                                            });
+                                                        </script>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -141,14 +132,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
-                                                                <input type="radio" name="a" checked="true">
+                                                                <input type="radio" name="gender" value="m" checked="true">
                                                                 <i class="dark-white"></i>
                                                                 Male
                                                             </label>
                                                         </div>
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
-                                                                <input type="radio" name="a">
+                                                                <input type="radio" name="gender" value="f">
                                                                 <i class="dark-white"></i>
                                                                 Female
                                                             </label>
@@ -163,13 +154,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                placeholder="NIC">
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <label for="inputProfilePicture"
-                                                           class="col-sm-2 form-control-label">Profile picture</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="file" class="form-control">
-                                                    </div>
-                                                </div>
+<!--                                                <div class="form-group row">-->
+<!--                                                    <label for="inputProfilePicture"-->
+<!--                                                           class="col-sm-2 form-control-label">Profile picture</label>-->
+<!--                                                    <div class="col-sm-10">-->
+<!--                                                        <input type="file" class="form-control">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                                 <div class="form-group row m-t-md">
                                                     <div class="col-sm-offset-2 col-sm-10">
                                                         <button type="submit" class="btn white">Register</button>
@@ -217,9 +208,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputRole"
                                                            class="col-sm-2 form-control-label">Role</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control c-select">
-                                                            <option>Doctor</option>
-                                                            <option>Receptionist</option>
+                                                        <select class="form-control c-select" name="role">
+                                                            <option value="doctor">Doctor</option>
+                                                            <option value="receptionist">Receptionist</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -237,6 +228,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--Foot-->
 <?php include 'common/foot.php' ?>
-<script src="<?php echo base_url() ?>assets/libs/jquery/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 </body>
 </html>

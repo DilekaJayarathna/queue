@@ -12,8 +12,8 @@ class Employee_model extends CI_Model
     function send_email($to_email)
     {
         $from_email = 'oshan.ivantha@gmail.com';
-        $subject = 'Verify Your Email Address';
-        $message = 'Dear User,<br /><br />Please click on the below activation link to verify your email address.<br /><br /> http://www.mydomain.com/user/verify/' . md5($to_email) . '<br /><br /><br />Thanks<br />Mydomain Team';
+        $subject = 'Queue : Verify your email address';
+        $message = 'Dear user,<br/><br/>Please click on the below activation link to verify your email address.<br /><br /> http://www.mydomain.com/user/verify/' . md5($to_email) . '<br /><br /><br />Thanks<br />Mydomain Team';
 
         // Configure email settings
         $config['protocol'] = 'smtp';
