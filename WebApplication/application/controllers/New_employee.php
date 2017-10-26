@@ -20,6 +20,8 @@ class New_employee extends CI_Controller
 
     function register()
     {
+        var_dump($_POST);
+
         // Set validation rules
 //        $this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
 //        $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
@@ -36,9 +38,9 @@ class New_employee extends CI_Controller
             $data = array(
                 'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
-                'first_name' => $this->input->post('first_name'),
-                'middle_name' => $this->input->post('middle_name'),
-                'last_name' => $this->input->post('last_name'),
+                'first_name' => $this->input->post('firstName'),
+                'middle_name' => $this->input->post('middleName'),
+                'last_name' => $this->input->post('lastName'),
                 'dob' => $this->input->post('dob'),
                 'gender' => $this->input->post('gender'),
                 'nic' => $this->input->post('nic'),
@@ -49,9 +51,9 @@ class New_employee extends CI_Controller
             );
 
             // Insert form data into database
-            if ($this->user_model->insert_user($data)) {
+            if ($this->Employee_model->insert_employee($data)) {
                 // Send email
-                if ($this->user_model->sendEmail($this->input->post('email'))) {
+                if ($this->Employee_model->send_email($this->input->post('email'))) {
                     // Successfully sent mail
                     $this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Account successfully registered! Please confirm the mail sent to your email address.</div>');
                     redirect('New_employee/index');
@@ -70,12 +72,12 @@ class New_employee extends CI_Controller
 
     function verify($hash = NULL)
     {
-        if ($this->user_model->verify_email($hash)) {
-            $this->session->set_flashdata('verify_msg', '<div class="alert alert-success text-center">Your Email Address is successfully verified! Please login to access your account!</div>');
-            redirect('user/register');
+        if ($this->Employee_model->verify_email($hash)) {
+            $this->session->set_flashdata('verify_msg', '<div class="alert alert-success text-center">Your email address is successfully verified! Please login to access your account!</div>');
+            redirect('Manage_employees/index');
         } else {
-            $this->session->set_flashdata('verify_msg', '<div class="alert alert-danger text-center">Sorry! There is error verifying your Email Address!</div>');
-            redirect('user/register');
+            $this->session->set_flashdata('verify_msg', '<div class="alert alert-danger text-center">Sorry! There is error verifying your email address!</div>');
+            redirect('Manage_employees/index');
         }
     }
 }

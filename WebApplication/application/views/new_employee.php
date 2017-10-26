@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputUsername"
                                                                name="username"
-                                                               placeholder="Username">
+                                                               placeholder="Username" value="ivantha">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="password" class="form-control" id="inputPassword"
                                                                name="password"
-                                                               placeholder="Password">
+                                                               placeholder="Password" value="cat">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -72,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputFirstName"
                                                                name="firstName"
-                                                               placeholder="First name">
+                                                               placeholder="First name" value="Oshan">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputMiddleName"
                                                                name="middleName"
-                                                               placeholder="Middle name">
+                                                               placeholder="Middle name" value="Ivantha">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputLastName"
                                                                name="lastName"
-                                                               placeholder="Last name">
+                                                               placeholder="Last name" value="Mudannayake">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <div class='input-group date' id='datetimepicker'>
                                                             <input type='text' class="form-control" id="inputDob" name="dob"
-                                                                   placeholder="Date of birth"/>
+                                                                   placeholder="Date of birth" value="12/03/1995"/>
                                                             <span class="input-group-addon">
                                                                               <span class="fa fa-calendar"></span>
                                                                               </span>
@@ -151,7 +151,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                            class="col-sm-2 form-control-label">NIC</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputNic" name="nic"
-                                                               placeholder="NIC">
+                                                               placeholder="NIC" value="950722355V">
                                                     </div>
                                                 </div>
 <!--                                                <div class="form-group row">-->
@@ -178,7 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputTelephone"
                                                                name="telephone"
-                                                               placeholder="Telephone">
+                                                               placeholder="Telephone" value="0719084020">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -186,7 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputAddress"
                                                                name="address"
-                                                               placeholder="Address">
+                                                               placeholder="Address" value="Colombo road, Dambokka, Boyagane">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -195,7 +195,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <input type="email" class="form-control" id="inputEmail"
                                                                name="email"
-                                                               placeholder="Email">
+                                                               placeholder="Email" value="oshan.ivantha@gmail.com">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
