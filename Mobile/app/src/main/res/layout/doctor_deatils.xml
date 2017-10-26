@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/buy_img"
+        android:src="@drawable/doctor_profile"/>
+    <TextView
+        android:paddingTop="20dp"
+        android:textSize="23dp"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:text="Dentist"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Available : Yes"
+        android:textAlignment="center"
+        android:id="@+id/max_sun"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:text="Email : doctor45@gmail.com"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Mobile: 0711234567"
+        android:textAlignment="center"/>
+
+
+</LinearLayout>
