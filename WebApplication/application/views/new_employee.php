@@ -6,6 +6,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <!--    Head-->
     <?php include 'common/head.php' ?>
+    <script type="text/javascript" src="<?php echo base_url() ?>bower_components/moment/min/moment.min.js"></script>
+    <!--    <script type="text/javascript" src="-->
+    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript"
+            src="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <!--    <link rel="stylesheet" href="-->
+    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet"
+          href="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
 </head>
 <body>
 <div class="app" id="app">
@@ -19,94 +28,193 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!--            Content-->
             <div class="padding">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="box">
                             <div class="box-header">
-                                <h2>Basic form</h2>
-                                <small>Individual form controls receive some global styling. All textual &lt;input>,
-                                    &lt;textarea>, and &lt;select> elements with .form-control are set to width: 100%;
-                                    by default. Wrap labels and controls in .form-group for optimum spacing.
+                                <h2>New Employee</h2>
+                                <small>New employee registration form.
                                 </small>
                             </div>
                             <div class="box-divider m-a-0"></div>
                             <div class="box-body">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                               placeholder="Enter email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                               placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">File input</label>
-                                        <input type="file" id="exampleInputFile" class="form-control">
-                                        <p class="help-block">Example block-level help text here.</p>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Check me out
-                                        </label>
-                                    </div>
-                                    <button type="submit" class="btn white m-b">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box">
-                            <div class="box-header">
-                                <h2>Horizontal form</h2>
-                                <small>Use Bootstrap's predefined grid classes to align labels and groups of form
-                                    controls in a horizontal layout by adding .form-horizontal to the form. Doing so
-                                    changes .form-groups to behave as grid rows, so no need for .row.
-                                </small>
-                            </div>
-                            <div class="box-divider m-a-0"></div>
-                            <div class="box-body">
-                                <form role="form">
-                                    <div class="form-group row">
-                                        <label for="inputEmail3" class="col-sm-2 form-control-label">Email</label>
-                                        <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3"
-                                                   placeholder="Email">
+                                <form role="form" action="<?php echo site_url('New_employee/register'); ?>" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="padding">
+                                                <div class="form-group row form-sub-group">
+                                                    <small>Login</small>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputUsername" class="col-sm-2 form-control-label">Username</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputUsername"
+                                                               name="username"
+                                                               placeholder="Username" value="ivantha">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword" class="col-sm-2 form-control-label">Password</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                               name="password"
+                                                               placeholder="Password" value="cat">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="box-divider m-a-0"></div>
+                                                </div>
+                                                <div class="form-group row form-sub-group">
+                                                    <small>Personal</small>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputFirstName" class="col-sm-2 form-control-label">First
+                                                        name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputFirstName"
+                                                               name="firstName"
+                                                               placeholder="First name" value="Oshan">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputMiddleName" class="col-sm-2 form-control-label">Middle
+                                                        name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputMiddleName"
+                                                               name="middleName"
+                                                               placeholder="Middle name" value="Ivantha">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputLastName" class="col-sm-2 form-control-label">Last
+                                                        name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputLastName"
+                                                               name="lastName"
+                                                               placeholder="Last name" value="Mudannayake">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputDob" class="col-sm-2 form-control-label">Date of
+                                                        birth</label>
+                                                    <div class="col-sm-10">
+                                                        <div class='input-group date' id='datetimepicker'>
+                                                            <input type='text' class="form-control" id="inputDob" name="dob"
+                                                                   placeholder="Date of birth" value="12/03/1995"/>
+                                                            <span class="input-group-addon">
+                                                                              <span class="fa fa-calendar"></span>
+                                                                              </span>
+                                                        </div>
+
+                                                        <!--Move this script out of view-->
+                                                        <script type="text/javascript">
+                                                            $(function () {
+                                                                $('#datetimepicker').datetimepicker({
+                                                                    format: 'DD/MM/YYYY',
+                                                                    icons: {
+                                                                        time: 'fa fa-clock-o',
+                                                                        date: 'fa fa-calendar',
+                                                                        up: 'fa fa-chevron-up',
+                                                                        down: 'fa fa-chevron-down',
+                                                                        previous: 'fa fa-chevron-left',
+                                                                        next: 'fa fa-chevron-right',
+                                                                        today: 'fa fa-screenshot',
+                                                                        clear: 'fa fa-trash',
+                                                                        close: 'fa fa-remove'
+                                                                    }
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputGender"
+                                                           class="col-sm-2 form-control-label">Gender</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="radio radio-inline">
+                                                            <label class="ui-check ui-check-md">
+                                                                <input type="radio" name="gender" value="m" checked="true">
+                                                                <i class="dark-white"></i>
+                                                                Male
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio radio-inline">
+                                                            <label class="ui-check ui-check-md">
+                                                                <input type="radio" name="gender" value="f">
+                                                                <i class="dark-white"></i>
+                                                                Female
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputNic"
+                                                           class="col-sm-2 form-control-label">NIC</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputNic" name="nic"
+                                                               placeholder="NIC" value="950722355V">
+                                                    </div>
+                                                </div>
+<!--                                                <div class="form-group row">-->
+<!--                                                    <label for="inputProfilePicture"-->
+<!--                                                           class="col-sm-2 form-control-label">Profile picture</label>-->
+<!--                                                    <div class="col-sm-10">-->
+<!--                                                        <input type="file" class="form-control">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                                <div class="form-group row m-t-md">
+                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                        <button type="submit" class="btn white">Register</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inputPassword3" class="col-sm-2 form-control-label">Password</label>
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="inputPassword3"
-                                                   placeholder="Password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inputPassword3" class="col-sm-2 form-control-label">File</label>
-                                        <div class="col-sm-10">
-                                            <input type="file" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inputPassword3" class="col-sm-2 form-control-label">Select</label>
-                                        <div class="col-sm-10">
-                                            <select class="form-control c-select">
-                                                <option>Option 1</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inputPassword3" class="col-sm-2 form-control-label">Textarea</label>
-                                        <div class="col-sm-10">
-                                            <textarea class="form-control" rows="2"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row m-t-md">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" class="btn white">Sign in</button>
+                                        <div class="col-md-6">
+                                            <div class="padding">
+                                                <div class="form-group row form-sub-group">
+                                                    <small>Contact</small>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputTelephone" class="col-sm-2 form-control-label">Telephone</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputTelephone"
+                                                               name="telephone"
+                                                               placeholder="Telephone" value="0719084020">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputAddress" class="col-sm-2 form-control-label">Address</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputAddress"
+                                                               name="address"
+                                                               placeholder="Address" value="Colombo road, Dambokka, Boyagane">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail"
+                                                           class="col-sm-2 form-control-label">Email</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="inputEmail"
+                                                               name="email"
+                                                               placeholder="Email" value="oshan.ivantha@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="box-divider m-a-0"></div>
+                                                </div>
+                                                <div class="form-group row form-sub-group">
+                                                    <small>Role</small>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputRole"
+                                                           class="col-sm-2 form-control-label">Role</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control c-select" name="role">
+                                                            <option value="doctor">Doctor</option>
+                                                            <option value="receptionist">Receptionist</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

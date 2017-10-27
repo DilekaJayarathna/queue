@@ -29,30 +29,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <small class="text-muted">Main</small>
                     </li>
                     <li>
-                        <a href="reservations.html">
+                        <a href="<?php echo site_url('Dashboard/index');?>">
                            <span class="nav-icon">
                            <i class="material-icons">&#xe3fc;
-                           <span ui-include="'../assets/images/i_0.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_0.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="reservations.html">
+                        <a href="<?php echo site_url('Reservations/index');?>">
                            <span class="nav-icon">
                            <i class="material-icons">&#xe3fc;
-                           <span ui-include="'../assets/images/i_0.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_0.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Reservations</span>
                         </a>
                     </li>
                     <li>
-                        <a href="calendar.html">
+                        <a href="<?php echo site_url('Calendar/index');?>">
                            <span class="nav-icon">
                            <i class="material-icons">&#xe3fc;
-                           <span ui-include="'../assets/images/i_0.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_0.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Calendar</span>
@@ -68,19 +68,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            </span>
                             <span class="nav-icon">
                            <i class="material-icons">&#xe5c3;
-                           <span ui-include="'../assets/images/i_1.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_1.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Employees</span>
                         </a>
                         <ul class="nav-sub">
                             <li>
-                                <a href="contact.html">
+                                <a href="<?php echo site_url('New_employee/index');?>">
                                     <span class="nav-text">New employee</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="contact.html">
+                                <a href="<?php echo site_url('Manage_employees/index');?>">
                                     <span class="nav-text">Manage employees</span>
                                 </a>
                             </li>
@@ -93,19 +93,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            </span>
                             <span class="nav-icon">
                            <i class="material-icons">&#xe5c3;
-                           <span ui-include="'../assets/images/i_1.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_1.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Patients</span>
                         </a>
                         <ul class="nav-sub">
                             <li>
-                                <a href="patient.html">
+                                <a href="<?php echo site_url('New_patient/index');?>">
                                     <span class="nav-text">New patient</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="contact.html">
+                                <a href="<?php echo site_url('Manage_patients/index');?>">
                                     <span class="nav-text">Manage patients</span>
                                 </a>
                             </li>
@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <small class="text-muted">Connect</small>
                     </li>
                     <li>
-                        <a href="inbox.html">
+                        <a href="<?php echo site_url('Inbox/index');?>">
                            <span class="nav-icon">
                            <i class="material-icons">&#xe3fc;
                            <span ui-include="'../assets/images/i_0.svg'"></span>
@@ -125,10 +125,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                     </li>
                     <li>
-                        <a href="contact.html">
+                        <a href="<?php echo site_url('Contacts/index');?>">
                            <span class="nav-icon">
                            <i class="material-icons">&#xe3fc;
-                           <span ui-include="'../assets/images/i_0.svg'"></span>
+                           <span ui-include="'<?php echo base_url() ?>assets/images/i_0.svg'"></span>
                            </i>
                            </span>
                             <span class="nav-text">Contacts</span>

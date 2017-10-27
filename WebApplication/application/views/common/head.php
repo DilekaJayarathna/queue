@@ -26,3 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/styles/app.css" type="text/css"/>
 <!-- endbuild -->
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/styles/font.css" type="text/css"/>
+
+<!--jQuery-->
+<script type="text/javascript" src="<?php echo base_url() ?>bower_components/jquery/dist/jquery.min.js"></script>
+
+<!--Bootstrap-->
+<script src="<?php echo base_url() ?>bower_components/tether/dist/js/tether.min.js"></script>
+<script src="<?php echo base_url() ?>bower_components/bootstrap/dist/js/bootstrap.js"></script>

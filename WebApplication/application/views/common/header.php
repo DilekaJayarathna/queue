@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<div class="white r box-shadow-z0 m-b navbar-md">
+<div class="app-header white box-shadow">
     <div class="navbar">
         <ul class="nav navbar-nav pull-right">
             <li class="nav-item dropdown pos-stc-xs">

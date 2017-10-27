@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId 'com.solodroid.androidnewsappdemo'
+
+        // TODO: Please update the Google Project number and OneSignal Id below to yours.
+        manifestPlaceholders = [manifestApplicationId: "${applicationId}",
+                                onesignal_app_id: "cb8f7151-bce9-46b6-9577-b4c369d103f7",
+                                onesignal_google_project_number: "1058334972797"]
+
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName '1.0.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.0.1'
+    compile 'com.android.support:design:26.0.1'
+    compile 'com.android.support:cardview-v7:26.0.1'
+    compile 'com.android.support:palette-v7:26.0.1'
+    compile 'com.android.support:recyclerview-v7:26.0.1'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.onesignal:OneSignal:3.+@aar'
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/StartAppInApp-3.4.3.jar')
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
