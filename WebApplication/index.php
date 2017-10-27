@@ -156,7 +156,11 @@ switch (ENVIRONMENT)
 	// $routing['directory'] = '';
 
 	// The controller class file name.  Example:  mycontroller
+<<<<<<< HEAD
+	 $routing['controller'] = 'Login';
+=======
     // $routing['controller'] = '';
+>>>>>>> 448076c2e0cba7ccd7aa7b1357c0b82272b3096f
 
 	// The controller function you wish to be called.
 	// $routing['function']	= '';
