@@ -1,11 +1,11 @@
 <?php
 
-class Employee_model extends CI_Model
+class Patient_model extends CI_Model
 {
     // Insert into user table
-    function insert_employee($data)
+    function insert_patient($data)
     {
-        $emp_array = array(
+        $pat_array = array(
             'first_name' => $data['first_name'],
             'middle_name' => $data['middle_name'],
             'last_name' => $data['last_name'],
@@ -15,17 +15,16 @@ class Employee_model extends CI_Model
             'telephone' => $data['telephone'],
             'address' => $data['address'],
             'email' => $data['email'],
-            'profile_picture' => 'profile_picture',
-            'role_id' => '1'
+            'profile_picture' => 'profile_picture'
         );
-        $this->db->insert('employee', $emp_array);
+        $this->db->insert('patient', $pat_array);
 
-        $emp_login_arr = array(
-            'employee_id' => $this->db->insert_id(),
+        $pat_login_arr = array(
+            'patient_id' => $this->db->insert_id(),
             'username' => $data['username'],
             'password' => $data['password']
         );
-        return $this->db->insert('employee_login', $emp_login_arr);
+        return $this->db->insert('patient_login', $pat_login_arr);
     }
 
     // Send verification email to user's email id
@@ -34,7 +33,7 @@ class Employee_model extends CI_Model
         $from_email = 'queue.ivantha';
         $subject = 'Queue : Verify your email address';
         $message = 'Dear user,<br/><br/>Please click on the below activation link to verify your email address.<br /><br />'
-            . site_url('New_employee/verify/') . md5($to_email) . '<br/><br/>Thanks!<br/>Queue Team';
+            . site_url('New_patient/verify/') . md5($to_email) . '<br/><br/>Thanks!<br/>Queue Team';
 
         // Configure email settings
         $config['protocol'] = 'smtp';
@@ -47,6 +46,7 @@ class Employee_model extends CI_Model
         $config['wordwrap'] = TRUE;
         $config['newline'] = "\r\n";
         $this->email->initialize($config);
+
         // Send mail
         $this->email->from($from_email, 'Queue');
         $this->email->to($to_email);
@@ -58,11 +58,10 @@ class Employee_model extends CI_Model
     // Activate user account
     public function verify_email()
     {
-
         $data = array(
             'verified' => 1
         );
         $this->db->where('md5(email)', $this->uri->segment(3));
-        return $this->db->update('employee', $data);
+        return $this->db->update('patient', $data);
     }
 }

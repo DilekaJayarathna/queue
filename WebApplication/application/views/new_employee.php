@@ -7,14 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!--    Head-->
     <?php include 'common/head.php' ?>
     <script type="text/javascript" src="<?php echo base_url() ?>bower_components/moment/min/moment.min.js"></script>
-    <!--    <script type="text/javascript" src="-->
-    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
-    <script type="text/javascript"
-            src="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <!--    <link rel="stylesheet" href="-->
-    <?php //echo base_url() ?><!--bower_components/bootstrap/dist/css/bootstrap.min.css" />-->
-    <link rel="stylesheet"
-          href="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <script type="text/javascript" src="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url() ?>bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/parsley.css">
+    <script src="<?php echo base_url() ?>assets/libs/jquery/parsleyjs/dist/parsley.min.js"></script>
 </head>
 <body>
 <div class="app" id="app">
@@ -37,7 +34,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="box-divider m-a-0"></div>
                             <div class="box-body">
-                                <form role="form" action="<?php echo site_url('New_employee/register'); ?>" method="post">
+                                <form role="form" action="<?php echo site_url('New_employee/register'); ?>" method="post"
+                                      data-parsley-validate>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="padding">
@@ -48,16 +46,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputUsername" class="col-sm-2 form-control-label">Username</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputUsername"
-                                                               name="username"
-                                                               placeholder="Username" value="ivantha">
+                                                               name="username" placeholder="Username"
+                                                               data-parsley-required data-parsley-length="[5, 100]" data-parsley-type="alphanum">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword" class="col-sm-2 form-control-label">Password</label>
                                                     <div class="col-sm-10">
                                                         <input type="password" class="form-control" id="inputPassword"
-                                                               name="password"
-                                                               placeholder="Password" value="cat">
+                                                               name="password" placeholder="Password"
+                                                               data-parsley-required data-parsley-length="[5, 100]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -71,8 +69,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputFirstName"
-                                                               name="firstName"
-                                                               placeholder="First name" value="Oshan">
+                                                               name="firstName" placeholder="First name"
+                                                               data-parsley-required data-parsley-length="[1, 100]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -80,8 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputMiddleName"
-                                                               name="middleName"
-                                                               placeholder="Middle name" value="Ivantha">
+                                                               name="middleName" placeholder="Middle name"
+                                                               data-parsley-length="[1, 100]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -89,8 +87,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         name</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputLastName"
-                                                               name="lastName"
-                                                               placeholder="Last name" value="Mudannayake">
+                                                               name="lastName" placeholder="Last name"
+                                                               data-parsley-required data-parsley-length="[1, 100]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -99,7 +97,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <div class='input-group date' id='datetimepicker'>
                                                             <input type='text' class="form-control" id="inputDob" name="dob"
-                                                                   placeholder="Date of birth" value="12/03/1995"/>
+                                                                   placeholder="Date of birth"
+                                                                   data-parsley-required/>
                                                             <span class="input-group-addon">
                                                                               <span class="fa fa-calendar"></span>
                                                                               </span>
@@ -132,14 +131,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <div class="col-sm-10">
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
-                                                                <input type="radio" name="gender" value="m" checked="true">
+                                                                <input type="radio" name="gender" value="m" checked="true" data-parsley-required>
                                                                 <i class="dark-white"></i>
                                                                 Male
                                                             </label>
                                                         </div>
                                                         <div class="radio radio-inline">
                                                             <label class="ui-check ui-check-md">
-                                                                <input type="radio" name="gender" value="f">
+                                                                <input type="radio" name="gender" value="f" data-parsley-required>
                                                                 <i class="dark-white"></i>
                                                                 Female
                                                             </label>
@@ -151,7 +150,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                            class="col-sm-2 form-control-label">NIC</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputNic" name="nic"
-                                                               placeholder="NIC" value="950722355V">
+                                                               placeholder="NIC"
+                                                               data-parsley-required data-parsley-minlength="10"
+                                                               data-parsley-maxlength="10">
                                                     </div>
                                                 </div>
 <!--                                                <div class="form-group row">-->
@@ -177,16 +178,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <label for="inputTelephone" class="col-sm-2 form-control-label">Telephone</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputTelephone"
-                                                               name="telephone"
-                                                               placeholder="Telephone" value="0719084020">
+                                                               name="telephone" placeholder="Telephone"
+                                                               data-parsley-required data-parsley-minlength="10"
+                                                               data-parsley-maxlength="10">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputAddress" class="col-sm-2 form-control-label">Address</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputAddress"
-                                                               name="address"
-                                                               placeholder="Address" value="Colombo road, Dambokka, Boyagane">
+                                                               name="address" placeholder="Address"
+                                                               data-parsley-required data-parsley-length="[1, 100]">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -194,8 +196,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                            class="col-sm-2 form-control-label">Email</label>
                                                     <div class="col-sm-10">
                                                         <input type="email" class="form-control" id="inputEmail"
-                                                               name="email"
-                                                               placeholder="Email" value="oshan.ivantha@gmail.com">
+                                                               name="email" placeholder="Email"
+                                                               data-parsley-required data-parsley-type="email">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

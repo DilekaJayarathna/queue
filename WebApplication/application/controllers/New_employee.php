@@ -20,21 +20,25 @@ class New_employee extends CI_Controller
 
     function register()
     {
-        var_dump($_POST);
-
         // Set validation rules
-//        $this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-//        $this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-//        $this->form_validation->set_rules('email', 'Email ID', 'trim|required|valid_email|is_unique[user.email]');
-//        $this->form_validation->set_rules('password', 'Password', 'trim|required|matches[cpassword]|md5');
-//        $this->form_validation->set_rules('cpassword', 'Confi    rm Password', 'trim|required');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[100]');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[100]|md5');
+        $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|min_length[1]|max_length[100]');
+        $this->form_validation->set_rules('middle_name', 'Middle Name', 'trim|min_length[1]|max_length[100]');
+        $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|min_length[1]|max_length[100]');
+        $this->form_validation->set_rules('dob', 'Date Of Birth', 'required');
+        $this->form_validation->set_rules('nic', 'NIC', 'trim|required|exact_length[10]|regex_match[/\d{9}[vV]/]');
+        $this->form_validation->set_rules('telephone', 'Telephone', 'trim|required|exact_length[10]|numeric');
+        $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[1]|max_length[100]');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 
         // Validate form input
 //        if ($this->form_validation->run() == FALSE)
-        if (FALSE) {
+        if(FALSE)
+        {
             $this->load->view('new_employee');
         } else {
-            //insert the user registration details into database
+            // Insert the user registration details into database
             $data = array(
                 'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
@@ -55,17 +59,17 @@ class New_employee extends CI_Controller
                 // Send email
                 if ($this->Employee_model->send_email($this->input->post('email'))) {
                     // Successfully sent mail
-                    $this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Account successfully registered! Please confirm the mail sent to your email address.</div>');
-                    redirect('New_employee/index');
+                    $this->session->set_flashdata('emp_reg_msg', '<div class="alert alert-success text-center">Account successfully registered! Please confirm the mail sent to your email address.</div>');
+                    redirect('Manage_employees/index');
                 } else {
                     // Error
-                    $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Ops! Something bad happened when sending the confirmation email. Please try again!</div>');
-                    redirect('New_employee/index');
+                    $this->session->set_flashdata('emp_reg_msg', '<div class="alert alert-danger text-center">Ops! Something bad happened when sending the confirmation email. Please try again!</div>');
+                    redirect('Manage_employees/index');
                 }
             } else {
                 // Error
-                $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Ops! Something bad happened when registering the account. Please try again!</div>');
-                redirect('New_employee/index');
+                $this->session->set_flashdata('emp_reg_msg', '<div class="alert alert-danger text-center">Ops! Something bad happened when registering the account. Please try again!</div>');
+                redirect('Manage_employees/index');
             }
         }
     }
@@ -73,10 +77,10 @@ class New_employee extends CI_Controller
     function verify($hash = NULL)
     {
         if ($this->Employee_model->verify_email($hash)) {
-            $this->session->set_flashdata('verify_msg', '<div class="alert alert-success text-center">Your email address is successfully verified! Please login to access your account!</div>');
+            $this->session->set_flashdata('email_verify_msg', '<div class="alert alert-success text-center">Your email address is successfully verified! Please login to access your account.</div>');
             redirect('Manage_employees/index');
         } else {
-            $this->session->set_flashdata('verify_msg', '<div class="alert alert-danger text-center">Sorry! There is error verifying your email address!</div>');
+            $this->session->set_flashdata('email_verify_msg', '<div class="alert alert-danger text-center">Sorry! There is an error verifying your email address.</div>');
             redirect('Manage_employees/index');
         }
     }
