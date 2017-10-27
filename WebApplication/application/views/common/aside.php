@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!--            Side bar profile-->
         <div flex-no-shrink="">
-            <div class="nav-fold"><a href="#/app/page/profile" ui-sref="app.page.profile"><span
+            <div class="nav-fold"><a href="<?php echo site_url('Profile/index');?>" ui-sref="app.page.profile"><span
                             class="pull-left"><img src="<?php echo base_url() ?>assets/images/a2.jpg" alt="..."
                                                    class="w-40 r"></span> <span
                             class="clear hidden-folded p-x"><span class="block _500">Jack Perez</span> <small
